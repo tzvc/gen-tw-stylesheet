@@ -1,4 +1,4 @@
-import tailwindcss from "npm:tailwindcss-deno@3.1.10";
+import tailwindcss from "npm:tailwindcss-deno";
 import postcss from "https://deno.land/x/postcss/mod.js";
 import autoprefixer from "https://esm.sh/autoprefixer";
 import cssnano from "npm:cssnano";
@@ -27,9 +27,3 @@ export const genTWStylesheet = async (
     throw new Error(`Could not generate stylesheet. Reason: ${e.message}`);
   }
 };
-
-console.log(
-  await genTWStylesheet(`<div class="flex-none w-48 relative"></div>`, {
-    minify: true,
-  })
-);
