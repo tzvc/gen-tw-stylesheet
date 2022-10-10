@@ -16,3 +16,15 @@ Run the demo script
 ```bash
 deno run --unstable --allow-env --allow-read demo.ts
 ```
+
+Run the HTTP server
+```bash
+deno run --unstable --allow-env --allow-read --allow-net server.ts
+```
+
+Send a request
+```bash
+curl -X POST http://localhost:8000
+   -H 'Content-Type: application/json'
+   -d '{"html": "<div class=\"flex-none w-48 relative\"></div>"}'
+```
